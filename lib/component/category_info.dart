@@ -28,7 +28,7 @@ class ItemInfo extends StatelessWidget {
         children: [
           Image.asset(imgPath, width: 65.0,),
           const SizedBox(height: 12.0,),
-          Text(itemLabel??'null', style: ts.copyWith(color: Colors.white),),
+          Text(itemLabel??'null', style: ts,),
         ],
       ),
     );
