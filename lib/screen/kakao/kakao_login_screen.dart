@@ -15,7 +15,7 @@ class KakaoLoginScreen extends StatelessWidget {
 
   void userDbRegister() async {
     get_user_info().then(
-      (user) async {
+          (user) async {
         if (user != null) {
           this.user = user;
           // 회원번호로 box를 연다.
@@ -37,21 +37,21 @@ class KakaoLoginScreen extends StatelessWidget {
   }
 
   void userDbRegisterDummy() async {
-          // // 회원번호로 box를 연다.
-          // await Hive.openBox<ItemModel>('123');
-          // await Hive.openBox('info');
-          // final box = Hive.box('info');
-          // box.put('id', 123);
-          // box.put('nickname', '익명의 카멜레온');
-          // box.put('mileage', 0);
-          // print('keys : ${box.keys.toList()}');
-          // print('values : ${box.values.toList()}');
+    // // 회원번호로 box를 연다.
+    // await Hive.openBox<ItemModel>('123');
+    // await Hive.openBox('info');
+    // final box = Hive.box('info');
+    // box.put('id', 123);
+    // box.put('nickname', '익명의 카멜레온');
+    // box.put('mileage', 0);
+    // print('keys : ${box.keys.toList()}');
+    // print('values : ${box.values.toList()}');
   }
 
   void _goToHomeScreen(context) {
     Navigator.of(context).pushAndRemoveUntil(
-      MaterialPageRoute(builder: (context) => const MainPage()),
-        (route) => false);
+        MaterialPageRoute(builder: (context) => const MainPage()),
+            (route) => false);
   }
 
   @override
@@ -130,19 +130,19 @@ class KakaoLoginScreen extends StatelessWidget {
     );
   }
 
-  // int _reverseOrder(k1, k2) {
-  //   if (k1 is int) {
-  //     if (k2 is int) {
-  //       if (k1 > k2) {
-  //         return -1;
-  //       } else if (k1 < k2) {
-  //         return 1;
-  //       } else {
-  //         return 0;
-  //       }
-  //     } else {
-  //       return -1;
-  //     }
-  //   }
-  // }
+// int _reverseOrder(k1, k2) {
+//   if (k1 is int) {
+//     if (k2 is int) {
+//       if (k1 > k2) {
+//         return -1;
+//       } else if (k1 < k2) {
+//         return 1;
+//       } else {
+//         return 0;
+//       }
+//     } else {
+//       return -1;
+//     }
+//   }
+// }
 }
