@@ -24,22 +24,18 @@ class HomeScreen extends StatelessWidget {
                 CategoryCard(
                   category: '가구류',
                   isTop: true,
-                  isRecycle: false,
                 ),
                 CategoryCard(
                   category: '대형 전자제품류',
                   isTop: false,
-                  isRecycle: false,
                 ),
                 CategoryCard(
                   category: '소형 전자제품류',
                   isTop: false,
-                  isRecycle: false,
                 ),
                 CategoryCard(
                   category: '생활용품류',
                   isTop: false,
-                  isRecycle: false,
                 ),
               ],
             ),
