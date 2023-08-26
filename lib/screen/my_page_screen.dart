@@ -14,13 +14,17 @@ class MyPageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Hive.box('info');
     int id = user.get('id');
+
     String nickName = user.get('nickname');
     int mileage = user.get('mileage');
+
     String road_address = user.get('road_address');
     String zone_code = user.get('zone_code');
     print(road_address);
     print(zone_code);
-    // final data_box = Hive.box<ItemModel>('$id');
+
+    final data_box = Hive.box<ItemModel>('$id');
+
     // print('keys : ${data_box.keys.toList()}');
     // print('values : ${data_box.values.toList()}');
 
@@ -135,7 +139,7 @@ class MyPageScreen extends StatelessWidget {
                             children: [
                               Text('우리집 주소', style: ts.copyWith(fontSize: 12)),
                               Text('${value.get('road_address')}',
-                                  style: ts.copyWith(fontSize: 15)),
+                                 style: ts.copyWith(fontSize: 15)),
                             ],
                           );
                         },
@@ -228,7 +232,8 @@ class MyPageScreen extends StatelessWidget {
             ),
           );
         } else {
-          // print('keys : ${data_box.keys.toList()}');
+           print("TeSSSSSSSSSS");
+           print('keys : ${data_box.keys.toList()}');
         }
         return Expanded(
           child: ListView.separated(

@@ -15,6 +15,17 @@ Future<User?> get_user_info() async {
     print('사용자 정보 요청 실패 $error');
   }
 }
+Future<User?> get_user_infoDummy() async {
+  try {
+    User user = User(1, true, null, null, null, DateTime.now(), DateTime.now());
+    print('사용자 정보 요청 성공'
+        '\n회원번호: test1'
+        '\n닉네임: testname');
+    return user;
+  } catch (error) {
+    print('사용자 정보 요청 실패 $error');
+  }
+}
 
 Future<void> signInWithKakao() async {
   if (await AuthApi.instance.hasToken()) {

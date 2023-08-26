@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:ssaksuri/component/week_info.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
